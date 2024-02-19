@@ -5,7 +5,7 @@ const Navbar = () => {
  <div>
 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
-    <h2 className='titulo text-center text-light'>Apple Tienda</h2>
+    <h2 className='titulo text-light' > Apple Mania <i className="bi bi-apple text-light"></i></h2> 
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -24,6 +24,8 @@ const Navbar = () => {
           <a className="nav-link " href="#">AirPods</a>
         </li>
       </ul>
+      <i className="bi bi-cart text-light  p-2" ></i>
+      <i class="bi bi-bag text-light  p-2"></i>
     </div>
   </div>
 </nav>
