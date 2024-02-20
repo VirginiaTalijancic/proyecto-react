@@ -1,4 +1,5 @@
 import classes from './Navbar.module.css'
+import CartWidget from '../CartWidget/CartWidget'
 
 const Navbar = () => {
     return (
@@ -24,8 +25,7 @@ const Navbar = () => {
           <a className="nav-link " href="#">AirPods</a>
         </li>
       </ul>
-      <i className="bi bi-cart text-light  p-2" ></i>
-      <i class="bi bi-bag text-light  p-2"></i>
+      <CartWidget/>
     </div>
   </div>
 </nav>

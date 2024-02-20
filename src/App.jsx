@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   return (
     <>
       <Navbar/>
-      
+      <ItemListContainer greeting= 'Bienvenidos a Apple Mania!'/>
       
     </>
   )
