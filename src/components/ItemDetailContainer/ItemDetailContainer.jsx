@@ -18,6 +18,7 @@ const ItemDetailContainer= () =>{
 
     return(
        <div className="container p-2 text-center ">
+        
             <h1 className="bg-black text-white">Detalle del producto</h1>
             <ItemDetail {...products} />
          </div>
