@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom"
+
 const CartWidget = () => {
     return(
-        <button>
+        <Link className="text-light">
             <i className="bi bi-cart" ></i>
             1
-        </button>
+        </Link>
     )
 }
 

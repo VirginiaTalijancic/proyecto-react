@@ -1,9 +1,40 @@
-const ItemListContainer= (props) => {
+import {useState, useEffect } from "react"
+import { getProducts, getProductsByCategory } from "../../asynMock"
+import ItemList from "../ItemList/ItemList"
+import { useParams } from "react-router-dom"
+
+const ItemListContainer = ({greeting}) =>{
+
+    const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
+    const { categoryId } = useParams()
+
+    useEffect(()=>{
+        setLoading(true)
+        const asycnFuction = categoryId ? getProductsByCategory : getProducts
+        
+        asycnFuction(categoryId)
+        .then(result =>{
+            setProducts(result)
+        })
+        .finally ( () =>{
+            setLoading(false)
+        })
+    }, [categoryId])
+    
+    if(loading) {
+        return <h2 className="text-center">CARGANDO LISTADO DE PRODUCTOS..</h2>
+    }
+    
     return(
-        <div>
-            <h1 className="text-center text-dark">{props.greeting}</h1> 
-        </div>
+        <main>
+            <h1>{greeting}</h1>
+            <ItemList products={products} />
+            
+        
+        </main>
     )
 }
+
 
 export default ItemListContainer
