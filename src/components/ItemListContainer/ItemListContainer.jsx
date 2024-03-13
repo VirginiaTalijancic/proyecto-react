@@ -27,10 +27,11 @@ const ItemListContainer = ({greeting}) =>{
     }
     
     return(
-        <main>
+        <main className="py-4 container">
+            <div className="row justify-content-center">
             <h1>{greeting}</h1>
             <ItemList products={products} />
-            
+            </div>
         
         </main>
     )
