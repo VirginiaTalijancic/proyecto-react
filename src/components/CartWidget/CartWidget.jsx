@@ -1,10 +1,15 @@
+import { useContext } from "react"
 import { Link } from "react-router-dom"
+import { CartContext } from "../../context/CartContext"
 
 const CartWidget = () => {
+    
+    const {totalQuantity} = useContext (CartContext)
+    
+    
     return(
-        <Link className="text-light">
-            <i className="bi bi-cart" ></i>
-            1
+        <Link to= '/cart'>
+            <i className="bi bi-cart text-white" ></i>     
         </Link>
     )
 }
